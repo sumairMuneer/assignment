@@ -1,0 +1,25 @@
+@import '../../../assets/mixins';
+
+.todo-container {
+
+  max-width: 400px;
+  &__card {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center; justify-content: space-between;
+    padding: 15px 30px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  &__title {
+    @include heading(18px, $font-poppins-regular-serif, $black);
+  }
+  &__status {
+    margin: 10px;
+
+    display: flex;
+    align-items: center;
+    @include heading(18px, $font-poppins-regular-serif, $black);
+  }
+}

@@ -1,0 +1,298 @@
+@import "../variables";
+
+.button {
+  display: block;
+  background: $primaryBlue;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: $primaryTextColor;
+  text-transform: capitalize;
+  margin: 10px 0;
+  outline: none;
+  font-weight: bold;
+
+
+  &:hover {
+    background-color: $primaryDarkBlue;
+    border-color: #2176bd;
+    outline: transparent;
+    cursor: pointer;
+  }
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  //justify-content: space-between;
+
+  .input-label {
+    margin: -10px 20px 0 0;
+    width: 25%;
+    max-width: 25%;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  .input {
+    margin: 0;
+    width: 75%;
+    max-width: 75%;
+
+    //align-self: flex-end;
+  }
+}
+
+
+.MuiContainer-root {
+  margin: 0;
+  padding: 0;
+}
+
+.MuiInput-underline:before {
+  border: none !important;
+  content: '' !important;
+}
+
+.table-more-option-btn {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ADC9DF;
+  position: relative;
+}
+
+.table-drag-job-btn {
+  border: 2px dashed $borderColor;
+  background: transparent;
+  border-radius: 35px;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 12px 15px;
+  color: $primaryBlack;
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.MuiTableCell-head {
+  background: $greenBg !important;
+  margin: 10px 0 !important;
+  height: 45px !important;
+}
+
+.datatable-container1 {
+  top: 60px;
+  position: relative;
+  margin: 0 20px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e3ebf6;
+  padding: 0px 15px 0px 15px;
+  min-height: 65vh;
+}
+
+.datatable-container {
+  width: 100%;
+  height: 100%;
+}
+
+.datatable-body {
+  tr {
+    th, td {
+      text-align: left;
+    }
+
+  }
+}
+
+.totalDigital {
+  margin-bottom: 10px;
+  margin-right: 1px;
+  display: inline-flex;
+  width: 15%;
+  padding: 1%;
+}
+
+.totalDigital span {
+  width: 100%;
+}
+
+
+.MuiGrid-item {
+  padding-bottom: 2px !important;
+
+  .MuiPaper-elevation1 {
+    box-shadow: 0 1px 40px 0 rgba(0, 0, 0, 0.04), 0 10px 25px 0 rgba(0, 0, 0, 0.010);
+    margin-bottom: 0 !important;
+  }
+}
+
+.MuiPaper-rounded {
+  margin-bottom: 0 !important;
+}
+
+//text classes
+
+.header-title {
+  font-size: 32px;
+  text-transform: capitalize;
+  color: $primaryBlack;
+  font-weight: bold;
+}
+
+.header-sub-title {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: $primaryBlack;
+}
+
+.header-sub-title2 {
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: $primaryBlack;
+}
+
+.mapClass {
+  div {
+    width: 50% !important;
+  }
+}
+
+
+.MuiDataGrid-root {
+  height: 700px !important;
+  min-height: 200px !important;
+
+  .MuiDataGrid-cell--textRight {
+    //text-align: left!important;
+  }
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  text-transform: capitalize;
+}
+
+.MuiBreadcrumbs-separator {
+  margin: 0 !important;
+}
+
+// date range picker styles
+
+.rdrCalendarWrapper {
+  box-shadow: 0 1px 2px 0 #23394221;
+}
+
+.rdrDateDisplayWrapper {
+  background-color: transparent !important
+}
+
+.rdrStartEdge {
+  color: #36BA80 !important;
+}
+
+.rdrEndEdge {
+  color: #36BA80 !important;
+}
+
+.rdrInRange {
+  color: #36BA80 !important;
+}
+
+.rdrDayStartPreview {
+  color: #36BA80 !important;
+}
+
+.rdrDayEndPreview {
+  color: #36BA80 !important;
+}
+
+.rdrDateDisplay {
+  color: #36BA80 !important;
+}
+
+.dateRangeBtn {
+  height: 33px;
+  margin-left: 2% !important;
+  position: absolute !important;
+  align-self: flex-end;
+  bottom: 0%;
+  right: 20px;
+  width: 0 !important;
+}
+
+
+.MuiAutocomplete-inputRoot {
+  padding: 0 !important;
+}
+
+//group label
+.MuiChip-label {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.my-custom-table {
+  .MuiTableRow-root {
+    .MuiTableCell-root {
+      padding: 16px 10px;
+    }
+  }
+}
+
+.has-drop {
+  // large first letter of sentence
+  &::first-letter {
+    font-size: 2rem;
+    float: left;
+    margin-right: 12px;
+  }
+}
+
+//snackbar styling
+.MuiSnackbar-root {
+  width: 100%;
+  top: 0 !important;
+  left: 0 !important;
+  background-color: $primaryPink !important;
+  padding: 10px 0 !important;
+
+  .MuiPaper-root {
+    width: 100%;
+    border-radius: 0 !important;
+    background-color: transparent;
+
+    .MuiAlert-icon {
+      display: none !important;
+    }
+
+    .MuiAlert-message, .MuiAlert-action {
+      color: white !important;
+
+      &::first-letter {
+        text-transform: uppercase !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .MuiSnackbar-root {
+    top: 0 !important;
+    left: 0 !important;
+    transform: translateX(0%) !important;
+  }
+}
+
+
+.main-container-top-mr {
+  margin-top: 15px;
+}
+
+.listing-main-container-top-mr {
+  margin-top: 70px;
+}

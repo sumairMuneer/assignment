@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import {Routes, Route, BrowserRouter, Navigate,} from "react-router-dom";
+
+import PublicRoutes from "./routes/PublicRoutes";
+import Header from "./components/header/index";
+import ProtectedRoutes from "./routes/ProtectedRoutes";
+
+import "./App.css";
+import "./assets/index.scss";
 
 function App() {
+  const [userLoggedIn] = useState(sessionStorage.getItem('userEmail'))
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route
+          path="/todos/*"
+          element={userLoggedIn ? <ProtectedRoutes/> : <Navigate to="/login"/>}
+        />
+        <Route
+          path="/todo/*"
+          element={userLoggedIn ? <ProtectedRoutes/> : <Navigate to="/login"/>}
+        />
+        <Route path="/*" element={<PublicRoutes/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
+
 
 export default App;

@@ -1,0 +1,53 @@
+@import "../variables";
+
+
+//over write material ui input classes
+.MuiOutlinedInput-root {
+  border-radius: 8px;
+
+  input {
+    padding: 10px !important;
+    font-family: $font-poppins-regular-serif !important;
+    //border-radius: 8px;
+  }
+
+  .placeholder {
+    background-color: red !important;
+
+  }
+
+  &::placeholder {
+    background-color: red !important;
+
+    &::first-letter {
+      text-transform: uppercase !important;
+    }
+  }
+}
+
+.MuiInputLabel-root {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #000000 !important;
+  font-family: $font-poppins-semibold-serif !important;
+
+  &::first-letter {
+    text-transform: uppercase !important;
+  }
+}
+
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: $primaryPink !important;
+}
+
+.Mui-error {
+  color: rgba(211, 47, 47, 0.75) !important;
+}
+
+/*style radio button*/
+.MuiRadio-colorPrimary {
+  color: $primaryPink !important;
+}

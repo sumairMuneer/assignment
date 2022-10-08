@@ -1,0 +1,171 @@
+@import '../../assets/mixins';
+
+
+.user__signup {
+  &__close__icon{
+    margin-top: 40px;
+  }
+
+  &__heading {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include heading(100px, $font-poppins-medium-serif, $primaryHeadingColor);
+  }
+  &__des {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include heading(18px, $font-poppins-regular-serif, $black);
+    span{
+      @include heading(18px, $font-poppins-medium-serif, $black);
+    }
+  }
+  &__terms {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include heading(17px, $font-poppins-regular-serif, $black);
+    span{
+      @include heading(17px, $font-poppins-regular-serif, $black);
+    }
+  }
+}
+
+
+.labelStyle {
+  font-family: "Poppins Medium", sans-serif;
+  font-size: 22px;
+  color: #311038;
+}
+
+.signupTextField {
+  width: 100%;
+  font-family: 'Poppins Regular', sans-serif !important;
+}
+
+.termsStyle {
+  font-family: "Poppins Regular", sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
+
+.termsContainer {
+  margin: 40px 2% 20px;
+}
+
+.leftColSignupContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.rightColSignupContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpSubmitBtn {
+  background-color: #ff4ca1;
+  width: 100%;
+  height: 50px;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid #ff4ca1;
+  font-family: "Poppins Semi Bold", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.welcomeMsgContainer {
+  display: flex;
+  margin: 10px 15%;
+}
+
+.welcomeMsg {
+  color: #311038;
+  font-family: "Poppins Medium", sans-serif;
+  font-size: 50px;
+}
+
+.accountExist {
+  max-width: 240px;
+  margin: 20px 0 5px 34%;
+}
+
+.footerRightContent {
+  margin-left: 6% !important;
+}
+
+.mt-50 {
+  margin-top: 50px !important;
+}
+
+.centerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .closeIcon {
+    width: 48px !important;
+    height: 36px !important;
+  }
+
+  .rightColSignupContainer {
+    margin: 5px auto;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .closeIcon {
+    width: 56px !important;
+    height: 36px !important;
+    margin-top: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .rightColSignupContainer {
+    max-width: 40%;
+  }
+
+  .welcomeMsgContainer {
+    margin: 0 0 10px 3%;
+  }
+
+  .welcomeMsg {
+    font-size: 46px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .closeIcon {
+    height: 40px !important;
+  }
+
+  .welcomeMsgContainer {
+    max-width: 310px;
+  }
+
+  .welcomeMsg {
+    font-size: 50px;
+  }
+
+}
+
+@media (min-width: 1600px) {
+  .accountExist {
+    margin: 20px 0 5px 28%;
+  }
+
+  .footerRightContent {
+    margin-left: 12% !important;
+  }
+}
+
+@media (min-width: 1900px) {
+  .accountExist {
+    margin: 20px 0 5px 27%;
+  }
+}
